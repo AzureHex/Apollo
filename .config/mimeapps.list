@@ -1,0 +1,9 @@
+[Default Applications]
+image/png=org.gnome.Loupe.desktop
+image/jpeg=org.gnome.Loupe.desktop
+application/yaml=dev.zed.Zed.desktop
+
+[Added Associations]
+image/png=org.gnome.Loupe.desktop;
+image/jpeg=org.gnome.Loupe.desktop;
+application/yaml=zen-alpha.desktop;dev.zed.Zed.desktop;
