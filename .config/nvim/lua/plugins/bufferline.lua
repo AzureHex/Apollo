@@ -10,9 +10,9 @@ return {
         require("bufferline").setup({
             options = {
                 numbers = "none", -- or "ordinal" or "buffer_id"
-                close_command = "bdelete! %d", -- Function to run when closing a buffer
+                close_command = "bdelete! %d",  -- Function to run when closing a buffer
                 right_mouse_command = "bdelete! %d", -- Function for right-click to close
-                left_mouse_command = "buffer %d", -- Left-click to switch buffer
+                left_mouse_command = "buffer %d",  -- Left-click to switch buffer
                 indicator = {
                     icon = "▎", -- Indicator symbol
                     style = "icon", -- Indicator style can be "icon" or "underline"
@@ -30,3 +30,4 @@ return {
         })
     end
 }
+
