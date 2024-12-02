@@ -1,7 +1,11 @@
 
-## 📤 Dependencies Installation
+```sh
+sudo pacman -S amd-ucode bluez docker docker-compose flatpak gtk-engine-murrine
+```
 
-### Install yay {AUR Helper}
+```sh
+sudo pacman -Rns gnome-weather gnome-contacts gnome-maps gnome-clocks simple-scan gnome-system-monitor gnome-text-editor gnome-connections snapshot totem gnome-music htop nano
+```
 
 ```sh
 sudo pacman -Syu
@@ -17,67 +21,25 @@ rm -rf /tmp/yay
 yay --version
 ```
 
-### 📦 Base Packages
-
-#### CLI/TUI
-
 ```sh
 yay -S ani-cli atuin bat btop cbonsai curl duf eza fastfetch fd ffmpeg figlet fish fzf gcc github-cli git-delta jq lazydocker lazygit lazynpm llvm neovim nodejs npm nushell nvitop nvm openrgb powertop ripgrep starship speedtest-cli syncthing tldr tmux tty-clock unimatrix wl-clipboard yazi yt-dlp zoxide 
 ```
-
-#### GUI Apps
 
 ```sh
 yay -S auto-cpufreq gnome-firmware mpv
 ```
 
-#### Flatpak
-
-## Theme
-
-## https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme
-
-```sh
-sudo pacman -S docker docker-compose gtk-engine-murrine
-```
-
-Applying Themes to Flatpak Apps
-
-    Override flatpak themes to ~/.themes:
-
-sudo flatpak override --filesystem=$HOME/.themes
-
-    Override flatpak icons to ~/.icons:
-
-sudo flatpak override --filesystem=$HOME/.icons
-
-    Override flatpak themes to ~/.config/gtk-4.0 locally:
-
-flatpak override --user --filesystem=xdg-config/gtk-4.0
-
-    Override flatpak themes to ~/.config/gtk-4.0 globally:
-
-sudo flatpak override --filesystem=xdg-config/gtk-4.0
-
 ### 🗛 Fonts
-
-Install fonts:
 
 ```sh
 yay -S ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-nerd-fonts-symbols-common ttf-font-awesome noto-fonts-cjk
 ```
-
-Refresh the font cache:
 
 ```sh
 fc-cache -fv
 ```
 
 ### Bluetooth
-
-```sh
-sudo pacman -S amd-ucode bluez flatpak gtk-engine-murrine
-```
 
 ```sh
 sudo systemctl start bluetooth.service
@@ -87,8 +49,7 @@ sudo systemctl start bluetooth.service
 sudo systemctl enable bluetooth.service
 ```
 
-
-Auto-Cpufetch
+### Auto-CpuFetch
 
 ```sh
 sudo systemctl mask power-profiles-daemon.service
@@ -98,17 +59,13 @@ sudo systemctl mask power-profiles-daemon.service
 systemctl enable --now auto-cpufreq
 ```
 
-### Install tmux plugin manager
+### tmux plugin manager
 
 ```sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-```sh
-sudo pacman -Rns gnome-weather gnome-contacts gnome-maps gnome-clocks simple-scan gnome-system-monitor gnome-text-editor gnome-connections snapshot totem gnome-music htop nano
-```
-
-## fish plugin manager Installation
+### Fish Plugin Manager
 
 ```sh
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
@@ -118,7 +75,7 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 fisher install PatrickF1/fzf.fish
 ```
 
-# Docker
+### Docker
 
 ```sh
 sudo systemctl start docker.service
@@ -147,16 +104,35 @@ docker network create -d macvlan \
   -o parent=enp7s0 macvlan
 ```
 
+### Flatpaks Installation
 
----
+```sh
+flatpak install -y com.raggesilver.BlackBox dev.zed.Zed com.mattjakeman.ExtensionManager org.gnome.gitlab.YaLTeR.Identity com.belmoussaoui.Decoder dev.geopjr.Archives com.github.huluti.Curtail io.gitlab.theevilskeleton.Upscaler com.belmoussaoui.Authenticator io.gitlab.adhami3310.Impression dev.geopjr.Collision io.github.flattool.Warehouse io.github.realmazharhussain.GdmSettings io.github.fizzyizzy05.binary dev.bragefuglseth.Keypunch io.github.tfuxu.Halftone org.gnome.World.PikaBackup io.github.fkinoshita.Telegraph com.github.ADBeveridge.Raider com.github.tchx84.Flatseal com.github.neithern.g4music io.missioncenter.MissionCenter com.github.tenderowl.frog io.github.zaedus.spider io.github.vikdevelop.SaveDesktop com.hunterwittenborn.Celeste org.nickvision.tubeconverter org.upscayl.Upscayl cafe.avery.Delfin com.usebottles.bottles com.ranfdev.Notify com.belmoussaoui.Obfuscate io.github.lainsce.Countdown io.github.celluloid_player.Celluloid org.mozilla.Thunderbird org.gnome.Papers org.gnome.World.Secrets net.codelogistics.webapps org.gnome.Fractal md.obsidian.Obsidian io.gitlab.adhami3310.Footage
+```
+
+### Theme
+
+## https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme
+
+Override flatpak themes to ~/.themes:
+
+    sudo flatpak override --filesystem=$HOME/.themes
+
+Override flatpak icons to ~/.icons:
+
+    sudo flatpak override --filesystem=$HOME/.icons
+
+Override flatpak themes to ~/.config/gtk-4.0 locally:
+
+    flatpak override --user --filesystem=xdg-config/gtk-4.0
+
+Override flatpak themes to ~/.config/gtk-4.0 globally:
+
+    sudo flatpak override --filesystem=xdg-config/gtk-4.0
+
+
 
 ```sh
 tldr -u
-```
-
-Flatpaks
-
-```sh
-flatpak install flathub com.raggesilver.BlackBox dev.zed.Zed com.mattjakeman.ExtensionManager org.gnome.gitlab.YaLTeR.Identity com.belmoussaoui.Decoder dev.geopjr.Archives com.github.huluti.Curtail io.gitlab.theevilskeleton.Upscaler com.belmoussaoui.Authenticator io.gitlab.adhami3310.Impression dev.geopjr.Collision io.github.flattool.Warehouse io.github.realmazharhussain.GdmSettings io.github.fizzyizzy05.binary dev.bragefuglseth.Keypunch io.github.tfuxu.Halftone org.gnome.World.PikaBackup io.github.fkinoshita.Telegraph com.github.ADBeveridge.Raider com.github.tchx84.Flatseal com.github.neithern.g4music io.missioncenter.MissionCenter com.github.tenderowl.frog io.github.zaedus.spider io.github.vikdevelop.SaveDesktop com.hunterwittenborn.Celeste org.nickvision.tubeconverter org.upscayl.Upscayl cafe.avery.Delfin com.usebottles.bottles com.ranfdev.Notify com.belmoussaoui.Obfuscate io.github.lainsce.Countdown io.github.celluloid_player.Celluloid org.mozilla.Thunderbird org.gnome.Papers org.gnome.World.Secrets net.codelogistics.webapps org.gnome.Fractal md.obsidian.Obsidian io.gitlab.adhami3310.Footage
 ```
 
