@@ -1,12 +1,12 @@
 
 ### Pacman
 
-Install Packages
+## Install Packages
 ```sh
 sudo pacman -S amd-ucode bluez docker docker-compose flatpak gtk-engine-murrine
 ```
 
-Uninstall Packages
+### Uninstall Packages
 ```sh
 sudo pacman -Rns gnome-weather gnome-contacts gnome-maps gnome-clocks simple-scan gnome-system-monitor gnome-text-editor gnome-connections snapshot totem gnome-music htop nano
 ```
@@ -112,7 +112,7 @@ flatpak install -y com.raggesilver.BlackBox dev.zed.Zed com.mattjakeman.Extensio
 
 ### Theme
 
-## https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme
+**https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme**
 
 Override flatpak themes to ~/.themes:
 ```sh
