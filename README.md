@@ -10,6 +10,19 @@ Uninstall Packages
 	sudo pacman -Rns gnome-weather gnome-contacts gnome-maps gnome-clocks simple-scan gnome-system-monitor gnome-text-editor gnome-connections snapshot totem gnome-music htop nano
 
 ### AUR Helper
+
+	sudo pacman -Syu
+	sudo pacman -S --needed git base-devel
+	cd /tmp
+	
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+	
+	cd
+	rm -rf /tmp/yay
+	yay --version
+
 ```sh
 sudo pacman -Syu
 sudo pacman -S --needed git base-devel
