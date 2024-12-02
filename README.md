@@ -41,6 +41,7 @@ yay --version
 ### Bluetooth
 
 	sudo systemctl start bluetooth.service
+
 	sudo systemctl enable bluetooth.service
 
 ```sh
