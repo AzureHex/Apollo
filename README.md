@@ -9,6 +9,7 @@ Uninstall Packages
 
 	sudo pacman -Rns gnome-weather gnome-contacts gnome-maps gnome-clocks simple-scan gnome-system-monitor gnome-text-editor gnome-connections snapshot totem gnome-music htop nano
 
+### AUR Helper
 ```sh
 sudo pacman -Syu
 sudo pacman -S --needed git base-devel
@@ -23,25 +24,24 @@ rm -rf /tmp/yay
 yay --version
 ```
 
-```sh
-yay -S ani-cli atuin bat btop cbonsai curl duf eza fastfetch fd ffmpeg figlet fish fzf gcc github-cli git-delta jq lazydocker lazygit lazynpm llvm neovim nodejs npm nushell nvitop nvm openrgb powertop ripgrep starship speedtest-cli syncthing tldr tmux tty-clock unimatrix wl-clipboard yazi yt-dlp zoxide 
-```
+### CLI/TUI
 
-```sh
-yay -S auto-cpufreq gnome-firmware mpv
-```
+	yay -S ani-cli atuin bat btop cbonsai curl duf eza fastfetch fd ffmpeg figlet fish fzf gcc github-cli git-delta jq lazydocker lazygit lazynpm llvm neovim nodejs npm nushell nvitop nvm openrgb powertop ripgrep starship speedtest-cli syncthing tldr tmux tty-clock unimatrix wl-clipboard yazi yt-dlp zoxide 
+
+### GUI
+
+	yay -S auto-cpufreq gnome-firmware mpv
 
 ### 🗛 Fonts
 
-```sh
-yay -S ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-nerd-fonts-symbols-common ttf-font-awesome noto-fonts-cjk
-```
+	yay -S ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-nerd-fonts-symbols-common ttf-font-awesome noto-fonts-cjk
 
-```sh
-fc-cache -fv
-```
+	fc-cache -fv
 
 ### Bluetooth
+
+	sudo systemctl start bluetooth.service
+	sudo systemctl enable bluetooth.service
 
 ```sh
 sudo systemctl start bluetooth.service
