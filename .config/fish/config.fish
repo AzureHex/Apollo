@@ -29,15 +29,16 @@ set -xg EDITOR zed
 alias cd=z
 alias la='eza -a --icons'
 alias ls='eza --icons'
+alias ll='eza -a -l --icons'
 alias tree='eza -a -T --git-ignore --icons'
 alias lta4="eza -lTag --git-ignore --level=4 --icons"
 alias tmux='tmux -f ~/.tmux.conf'
 alias branch='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff --color=always {1} | delta" --pointer="" | xargs git checkout'
 alias commits='~/.local/bin/git-commits.sh'
+alias doom='~/.local/bin/doom'
+alias rain="unimatrix -n -s 90 -l 'o'"
 alias clock='tty-clock -sbc'
 alias bonsai='cbonsai --seed 119 --live'
-alias rain="unimatrix -n -s 90 -l 'o'"
-alias doom='~/.local/bin/doom'
 alias zed='flatpak run dev.zed.Zed'
 
 set -x HOMEBREW_NO_ENV_HINTS 1
@@ -111,4 +112,3 @@ function backup --argument filename
 end
 
 set -g fish_greeting ''
-
