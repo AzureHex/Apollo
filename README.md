@@ -1,11 +1,13 @@
 
-```sh
-sudo pacman -S amd-ucode bluez docker docker-compose flatpak gtk-engine-murrine
-```
+### Pacman
 
-```sh
-sudo pacman -Rns gnome-weather gnome-contacts gnome-maps gnome-clocks simple-scan gnome-system-monitor gnome-text-editor gnome-connections snapshot totem gnome-music htop nano
-```
+Install Packages
+
+	sudo pacman -S amd-ucode bluez docker docker-compose flatpak gtk-engine-murrine
+
+Uninstall Packages
+
+	sudo pacman -Rns gnome-weather gnome-contacts gnome-maps gnome-clocks simple-scan gnome-system-monitor gnome-text-editor gnome-connections snapshot totem gnome-music htop nano
 
 ```sh
 sudo pacman -Syu
@@ -131,8 +133,7 @@ Override flatpak themes to ~/.config/gtk-4.0 globally:
     sudo flatpak override --filesystem=xdg-config/gtk-4.0
 
 
+TLDR Update Cache
 
-```sh
-tldr -u
-```
+	tldr-u
 
