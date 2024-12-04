@@ -37,7 +37,7 @@ alias branch='git branch --sort=-committerdate | fzf --header "Checkout Recent B
 alias commits='~/.local/bin/git-commits.sh'
 alias doom='~/.local/bin/doom'
 alias rain="unimatrix -n -s 90 -l 'o'"
-alias clock='tty-clock -sbc'
+alias tty-time='tty-clock -sbc'
 alias bonsai='cbonsai --seed 119 --live'
 alias zed='flatpak run dev.zed.Zed'
 
