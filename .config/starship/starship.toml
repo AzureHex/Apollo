@@ -1,4 +1,5 @@
 format = """
+$os \
 $directory\
 $git_branch\
 $git_status\
@@ -19,13 +20,18 @@ $line_break\
 $character"""
 
 add_newline = true
-palette = 'space'  # catppuccin, nord, onedark, space
+palette = 'space' # onedark, catppuccin_mocha, nord
+
 [os]
-format = '[$symbol](red)'
+format = '[$symbol](blue)'
 disabled = false
 
 [os.symbols]
-Arch = "󰣇 "
+Arch = '󰣇 '
+Debian = " "
+Ubuntu = ' '
+Macos = '󰀵'
+Windows = ' '
 
 [character]
 success_symbol = '[➜](bold green)'
@@ -33,7 +39,7 @@ error_symbol = '[➜](bold red)'
 
 [directory]
 style = 'bold fg:dark_blue'
-format = '[$path ]($style)[$read_only]($read_only_style)'
+format = '[$path ]($style)[$read_only]($read_only_style)' 
 truncation_length = 8
 truncation_symbol = '…/'
 truncate_to_repo = false
@@ -121,33 +127,18 @@ format = '[$duration]($style)'
 
 # Color palettes
 
-[palettes.catppuccin]
-rosewater = "#f4dbd6"
-flamingo = "#f0c6c6"
-pink = "#f5bde6"
-mauve = "#c6a0f6"
-red = "#ed8796"
-maroon = "#ee99a0"
-peach = "#f5a97f"
-yellow = "#eed49f"
-green = "#a6da95"
-teal = "#8bd5ca"
-sky = "#91d7e3"
-sapphire = "#7dc4e4"
-blue = "#8aadf4"
-lavender = "#b7bdf8"
-text = "#cad3f5"
-subtext1 = "#b8c0e0"
-subtext0 = "#a5adcb"
-overlay2 = "#939ab7"
-overlay1 = "#8087a2"
-overlay0 = "#6e738d"
-surface2 = "#5b6078"
-surface1 = "#494d64"
-surface0 = "#363a4f"
-base = "#24273a"
-mantle = "#1e2030"
-crust = "#181926"
+[palettes.onedark]
+dark_blue='#61afef'
+blue='#56b6c2'
+red='#e06c75'
+green='#98c379'
+purple='#c678dd'
+cyan='#56b6c2'
+orange='#be5046'
+yellow='#e5c07b'
+gray='#828997'
+white ='#abb2bf'
+black='#2c323c'
 
 [palettes.nord]
 dark_blue = '#5E81AC'
@@ -160,20 +151,7 @@ yellow = '#EBCB8B'
 purple = '#B48EAD'
 gray = '#434C5E'
 black = '#2E3440'
-white = '#D8DEE9'
-
-[palettes.onedark]
-dark_blue = '#61afef'
-blue = '#56b6c2'
-red = '#e06c75'
-green = '#98c379'
-purple = '#c678dd'
-cyan = '#56b6c2'
-orange = '#be5046'
-yellow = '#e5c07b'
-gray = '#828997'
-white = '#abb2bf'
-black = '#2c323c'
+white='#D8DEE9'
 
 [palettes.space]
 dark_blue = '#00B5E2'
@@ -187,3 +165,5 @@ purple = '#F44B5A'
 gray = '#4A4A4A'
 black = '#4A4A4A'
 white = '#D9D9D9'
+
+
