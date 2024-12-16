@@ -34,7 +34,6 @@ alias tree='eza -a -T --git-ignore --icons'
 alias lta4="eza -lTag --git-ignore --level=4 --icons"
 alias tmux='tmux -f ~/.tmux.conf'
 alias branch='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff --color=always {1} | delta" --pointer="" | xargs git checkout'
-alias commits='~/.local/bin/git-commits.sh'
 alias doom='~/.local/bin/doom'
 alias rain="unimatrix -n -s 90 -l 'o'"
 alias tty-time='tty-clock -sbc'
