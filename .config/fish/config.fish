@@ -33,11 +33,13 @@ alias ll='eza -a -l --icons'
 alias tree='eza -a -T --git-ignore --icons'
 alias lta4="eza -lTag --git-ignore --level=4 --icons"
 alias tmux='tmux -f ~/.tmux.conf'
+alias rg='rg -i'
 alias branch='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff --color=always {1} | delta" --pointer="" | xargs git checkout'
-alias doom='~/.local/bin/doom'
-alias rain="unimatrix -n -s 90 -l 'o'"
-alias tty-time='tty-clock -sbc'
+alias gen='tgpt -i'
+alias clock='tty-clock -sbc'
 alias bonsai='cbonsai --seed 119 --live'
+alias rain="unimatrix -n -s 90 -l 'o'"
+alias doom='~/.local/bin/doom'
 alias zed='flatpak run dev.zed.Zed'
 
 set -x HOMEBREW_NO_ENV_HINTS 1
@@ -91,6 +93,11 @@ set -xg _ZO_FZF_OPTS $FZF_DEFAULT_OPTS '--preview "{$fzf_preview_dir_cmd} {2}"'
 #    nvim $argv
 #end
 
+# backups
+function backup --argument filename
+    cp $filename $filename.bak
+end
+
 # ollama
 function ollama-serve
     ollama serve > /dev/null 2>&1 &
@@ -98,11 +105,6 @@ end
 
 function ollama-kill
     pkill ollama
-end
-
-# backups
-function backup --argument filename
-    cp $filename $filename.bak
 end
 
 set -g fish_greeting ''
